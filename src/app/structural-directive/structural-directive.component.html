@@ -1,29 +1,36 @@
 <br />
-<h3><b>ngSwitch</b></h3>
+<h3 class="text-white"><b>ngSwitch</b></h3>
 <hr />
 <br />
 <div>
-  <h1>ngClass</h1>
-  <p [ngClass]="state">Start editing to see some magic happen :)</p>
+  <h1 class="text-white">ngClass</h1>
+  <p class="text-white" [ngClass]="state">Start editing to see some magic happen :)</p>
   <button (click)="state = 'light'" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">light</button>
   <button (click)="state = 'dark'" type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Dark</button>
-  <button (click)="state = 'normal'" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">normal</button> selected class :{{ state }}
+  <button (click)="state = 'normal'" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">normal</button>
+  <p class="text-white">
+    selected class :{{ state }}
+  </p>
 
-  <h1>ngStyle</h1>
+
+  <h1 class="text-white">ngStyle</h1>
   <p [ngStyle]="{ 'background-color': color }">
     Start editing to see some magic happen :)
   </p>
-  <button (click)="color = '#fff'">light</button>
-  <button (click)="color = '#cfd8dc'">dark</button>
-  <button (click)="color = '#29434e'">normal</button> selected color :{{
+  <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" (click)="color = '#fff'">light</button>
+  <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" (click)="color = '#cfd8dc'">dark</button>
+  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" (click)="color = '#29434e'">normal</button>
+  <p class="text-white">
+    selected color :{{
     color
   }}
+  </p>
 </div>
 <br />
-<h3><b>ngIf</b></h3>
+<h3 class="text-white"><b>ngIf</b></h3>
 <hr />
 <br />
-<div>
+<div class="text-white">
   <div *ngIf="isActive; then thenBlock; else elseBlock"></div>
   <ng-template #thenBlock> This text is displayed when active. </ng-template>
   <ng-template #elseBlock>
@@ -45,10 +52,10 @@
   </ng-template>
 </div>
 <br />
-<h3><b>ngFor</b></h3>
+<h3 class="text-white"><b>ngFor</b></h3>
 <hr />
 <br />
-<ul *ngFor="let plan of plans">
+<ul *ngFor="let plan of plans" class="text-white">
   <li>{{ plan.name }} - ${{ plan.premiumInDollars }}</li>
   <span>Validity in years: {{ plan.validityInYears }}</span>
 </ul>
