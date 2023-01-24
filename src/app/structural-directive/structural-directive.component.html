@@ -1,0 +1,54 @@
+<br />
+<h3><b>ngSwitch</b></h3>
+<hr />
+<br />
+<div>
+  <h1>ngClass</h1>
+  <p [ngClass]="state">Start editing to see some magic happen :)</p>
+  <button (click)="state = 'light'" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">light</button>
+  <button (click)="state = 'dark'" type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Dark</button>
+  <button (click)="state = 'normal'" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">normal</button> selected class :{{ state }}
+
+  <h1>ngStyle</h1>
+  <p [ngStyle]="{ 'background-color': color }">
+    Start editing to see some magic happen :)
+  </p>
+  <button (click)="color = '#fff'">light</button>
+  <button (click)="color = '#cfd8dc'">dark</button>
+  <button (click)="color = '#29434e'">normal</button> selected color :{{
+    color
+  }}
+</div>
+<br />
+<h3><b>ngIf</b></h3>
+<hr />
+<br />
+<div>
+  <div *ngIf="isActive; then thenBlock; else elseBlock"></div>
+  <ng-template #thenBlock> This text is displayed when active. </ng-template>
+  <ng-template #elseBlock>
+    This text is displayed when not active.
+  </ng-template>
+  <br />
+
+  <label>
+    <input type="checkbox" [(ngModel)]="isActive" />
+    Is active
+  </label>
+  <br />
+
+  <ng-template [ngIf]="isActive" [ngIfElse]="elseBlock">
+    This text is displayed when active.
+  </ng-template>
+  <ng-template #elseBlock>
+    This text is displayed when not active.
+  </ng-template>
+</div>
+<br />
+<h3><b>ngFor</b></h3>
+<hr />
+<br />
+<ul *ngFor="let plan of plans">
+  <li>{{ plan.name }} - ${{ plan.premiumInDollars }}</li>
+  <span>Validity in years: {{ plan.validityInYears }}</span>
+</ul>
